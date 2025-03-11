@@ -15,6 +15,7 @@ export class AppComponent implements AfterViewInit {
     const soundClips = document.querySelector(".sound-clips") as HTMLDivElement;
     const canvas = document.querySelector(".visualizer") as HTMLCanvasElement;
     const mainSection = document.querySelector(".main-controls") as HTMLDivElement;
+    const pResult = document.querySelector("#result") as HTMLParagraphElement;
 
     // Disable stop button while not recording
     stop.disabled = true;
@@ -238,4 +239,5 @@ async function generate(base64: string) {
 
   // console.log(JSON.parse(text.slice(7, -4)));
   console.log(text);
+  document.getElementById('result')!.innerHTML = text;
 }
