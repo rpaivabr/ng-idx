@@ -221,7 +221,8 @@ async function generate(base64: string) {
     // text: `
     // Can you transcribe this interview, in the format of timecode, speaker, caption?
     // Use speaker A, speaker B, etc. to identify speakers.`,
-    text: 'dado o audio, referente a leitura da frase em ingles "I wanna travel to Japan next year and I like soda.", me de uma nota de 0 a 10 quanto a qualidade da pronúncia em inglês, e sugestões para melhoria. o formato da resposta será em JSON apenas, com uma propriedade number chamada "Rating" e outra propriedade array de strings com no máximo 3 frases de até 20 palavras com dicas de melhoria (as sugestões em português)',
+    // text: 'dado o audio, referente a leitura da frase em ingles "I wanna travel to Japan next year and I like soda.", me de uma nota de 0 a 10 quanto a qualidade da pronúncia em inglês, e sugestões para melhoria. o formato da resposta será em JSON apenas, com uma propriedade number chamada "Rating" e outra propriedade array de strings com no máximo 3 frases de até 20 palavras com dicas de melhoria (as sugestões em português)',
+    text: 'transcreva o audio: '
   };
 
   const request = {
@@ -235,6 +236,6 @@ async function generate(base64: string) {
   // // Converte a string JSON interna em um objeto JavaScript
   // const objetoJson = JSON.parse(jsonInterno);
 
-  console.log(JSON.parse(text.slice(7, -4)));
+  // console.log(JSON.parse(text.slice(7, -4)));
   console.log(text);
 }
